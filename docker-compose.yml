@@ -1,0 +1,24 @@
+version: '3'
+
+services:
+    db:
+        image: mysql:5.7
+        environment:
+            - MYSQL_ROOT_PASSWORD=shittypassword
+            - MYSQL_DATABASE=fakedb
+        volumes:
+            - devmysqldb:/var/lib/mysql
+            - ./db/sql:/docker-entrypoint-initdb.d
+
+    backend:
+        build: src
+        environment:
+            - CLIENT_ID=eG4umCQ3qUTYmQX8SfnkPEbwwGjTOx6TyXifc1FJ
+            - CLIENT_SECRET=A3hzmToONsEfWp0jWxtk6HWJmvrrC5hT40WPbRwAbNJfZ5E5f0
+            - WHITELIST=youtube.com,vimeo.com
+        links:
+            - db
+        ports:
+            - "18000:8000"
+volumes:  
+    devmysqldb:

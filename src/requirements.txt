@@ -1,0 +1,16 @@
+Flask
+Flask-Migrate
+Flask-OAuthlib
+Flask-Script
+Flask-SQLAlchemy
+itsdangerous
+Jinja2
+passlib
+SQLAlchemy-Utils
+Werkzeug
+mysqlclient
+flask-socketio
+eventlet
+flask_wtf
+flask_testing
+requests

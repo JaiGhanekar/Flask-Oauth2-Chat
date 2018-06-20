@@ -1,0 +1,11 @@
+.modal-body {
+    max-height: 800px;
+}
+select {
+    width: 100% !important;
+}
+
+ul {
+  list-style-type: none;
+}
+

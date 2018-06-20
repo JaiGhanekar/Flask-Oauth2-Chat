@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4">
+            </div>
+            <div class="col-lg-4">
+                <h1>Login to Flask Oauth2-Chat!</h1>
+            </div>
+            <div class="col-lg-4">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4">
+            </div>
+            <div class="col-lg-4">
+                <div class="form-group">
+                    <label for="email">Email address:</label>
+                    <input type="email" class="form-control" id="email">
+                </div>
+                <div class="form-group">
+                    <label for="pwd">Password:</label>
+                    <input type="password" class="form-control" id="pwd">
+                </div>
+                <div class="checkbox">
+                    <label> <input type="checkbox"> Remember me</label>
+                </div>
+                <div class="btn-group">
+                  <button id="login" type="button" class="btn btn-default">Login</button>
+                  <button type="button" id="signupbtn" class="btn btn-primary">Signup</button>
+                </div>
+            </div>
+            <div class="col-lg-4">
+            </div>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="signup" tabindex="-1" role="dialog" aria-labelledby="signupLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="signupLabel">Signup</h5>
+                    </div>
+                    <div class="modal-body">
+                        <p id="summary"></p>
+                        <div class="form-group">
+                            <label for="signup-name">Name:</label>
+                            <input class="form-control" id="signup-name">
+                        </div>
+                        <div class="form-group">
+                            <label for="signup-email">Email address:</label>
+                            <input type="email" class="form-control" id="signup-email">
+                        </div>
+                        <div class="form-group">
+                            <label for="pwd">Password:</label>
+                            <input type="password" class="form-control" id="signup-pwd">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" id="close" class="btn btn-secondary">Close</button>
+                        <button type="button" id="savesignupbtn" class="btn btn-primary">Signup</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src="{{url_for('static', filename='js/index.js')}}"></script>
+</body>
+
+</html>

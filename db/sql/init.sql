@@ -1,4 +1,4 @@
-USE challenge;
+USE fakedb;
 
 CREATE TABLE test(col VARCHAR(10));
 
